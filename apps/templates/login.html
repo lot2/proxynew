@@ -1,32 +1,51 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>用户登录</title>
-    <meta charset="UTF-8">
-    <!-- 新 Bootstrap 核心 CSS 文件 -->
-    <link rel='stylesheet' href="{{ url_for('static',filename='CSS/bootstrap.min.css') }}">
-    <link rel='stylesheet' href="{{ url_for('static',filename='CSS/signin.css') }}">
-    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
-    <script src="{{ url_for('static',filename='JS/jquery.min.js') }}"></script>
-    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
-    <script src="{{ url_for('static',filename='JS/bootstrap.min.js') }}"></script>
-</head>
-<body>
-<div class="container">
+    <meta charset="utf-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <link rel="shortcut icon" href="{{ url_for('static',filename='img/favicon.html') }}">
+    <script src='{{ url_for('static',filename='JS/modernizr.custom.js') }}'></script>
 
-      <form class="form-signin" action="/login" role="form" method="post">
-        <h2 class="form-signin-heading">Please Sign in</h2>
-        <input class="form-control" autofocus required  name="username" id="id_username" type="text" placeholder="UserName">
-        <input class="form-control" required type="password" placeholder="Password" name="password" id="id_password">
-        <div class="checkbox">
-          <label>
-            <input type="checkbox" value="remember-me"> Remember me
-          </label>
+    <!-- Bootstrap core CSS -->
+    <link href="{{ url_for('static',filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static',filename='css/bootstrap-reset.css') }}" rel="stylesheet">
+    <!--external css-->
+    <link href="{{ url_for('static',filename='assets/font-awesome/css/font-awesome.css') }}" rel="stylesheet" />
+    <link href="{{ url_for('static',filename='assets/morris.js-0.4.3/morris.css') }}" rel="stylesheet" />
+    <!-- Custom styles for this template -->
+    <link href="{{ url_for('static',filename='css/style.css') }}" rel="stylesheet" />
+    <link href="{{ url_for('static',filename='css/style-responsive.css') }}" rel="stylesheet" />
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 tooltipss and media queries -->
+    <!--[if lt IE 9]>
+        <script src="{{ url_for('static',filename='js/html5shiv.js') }}"></script>
+        <script src="{{ url_for('static',filename='js/respond.min.js') }}"></script>
+    <![endif]-->
+</head>
+
+  <body class="login-body">
+
+    <div class="container">
+
+      <form class="form-signin" action="/login" method="post">
+        <h2 class="form-signin-heading">sign in now</h2>
+        <div class="login-wrap">
+            <input type="text"  name="username" id="id_username" class="form-control" placeholder="User ID" autofocus>
+            <input type="password" name="password" id="id_password" class="form-control" placeholder="Password">
+            <label class="checkbox">
+                <input type="checkbox" value="remember-me"> Remember me
+                <span class="pull-right"> <a href="#"> Forgot Password?</a></span>
+            </label>
+            <button class="btn btn-lg btn-login btn-block" type="submit">Sign in</button>
         </div>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-        <button class="btn btn-lg btn-primary btn-block" type="button">Register</button>
+
       </form>
 
     </div>
-</body>
+
+
+  </body>
 </html>

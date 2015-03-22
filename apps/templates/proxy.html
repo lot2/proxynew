@@ -1,27 +1,25 @@
 {% extends 'header.html' %}
 {% block content %}
-    <div class='container' style="width: 100%">
-        <div class="row">
-            <div class="col-sm-3 col-md-2 sidebar">
-                <ul class="nav nav-sidebar">
-                    <li><a href="/index">Dashboard</a></li>
-                    <li><a href="/database">Database Proxy</a></li>
-                    <li><a href="/sql">SQL Log</a></li>
-                    <li><a href="JavaScript:void(0);"  onclick="doToggleAdmin(this)">System</a></li>
-                    <li name="admin_detail"><a href="/normal">&nbsp;&nbsp;&nbsp;&nbsp;Normal Config</a></li>
-                    <li class="active" name="admin_detail"><a href="/proxy">&nbsp;&nbsp;&nbsp;&nbsp;Proxy Server Config</a></li>
-                    <li name="admin_detail"><a href="/user">&nbsp;&nbsp;&nbsp;&nbsp;User Management</a></li>
-                </ul>
-            </div>
-            <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-                <div class="row">
-                  <div class="col-md-6">
+    <!--main content start-->
+    <style>
+        #tbl_sql tbody td {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    </style>
+    <section id="main-content">
+
+        <section class="wrapper">
+            <!-- page start-->
+            <div class="row">
+                  <div class="col-lg-6">
                       <button type="button" class="btn btn-primary">Create</button>
                       <p></p>
-                      <div class="panel panel-default div-scrollable" style="min-width: 330px;">
+                      <div class="panel panel-primary div-scrollable" style="min-width: 330px;">
                           <table id="user_table" class="table table-bordered table-hover" style="cursor: pointer;">
                               <thead>
-                                  <tr style="background-color: lightgrey;">
+                                  <tr style="background-color: #7087a3;color: #eee;">
                                       <th>Name</th><th>IP</th><th>可用端口范围</th><th>Enable</th>
                                   </tr>
                               </thead>
@@ -56,15 +54,15 @@
                               </tbody>
                           </table>
                       </div>
-                      <div class="panel panel-default">
+                      <div class="panel panel-primary">
                           <div class="panel-heading">Comments</div>
                           <div class="panel-body">
                             Information content
                           </div>
                       </div>
                   </div>
-                  <div class="col-md-6">
-                      <div class="panel panel-default">
+                  <div class="col-lg-6">
+                      <div class="panel panel-primary">
                       <div class="panel-heading">Proxy Server Configuration</div>
                               <div class="panel-body">
                                   <form class="form-horizontal" style="max-width: 400px;">
@@ -130,9 +128,9 @@
                       </div>
                   </div>
                </div>
-            </div>
-        </div>
-        <script>
+        </section>
+    </section>
+    <script>
             function getPos(obj) {
                 obj.focus();
                 var workRange = document.selection.createRange();
@@ -201,5 +199,5 @@
                 }
             }
         </script>
-    </div>
+    <!--main content end-->
 {% endblock %}

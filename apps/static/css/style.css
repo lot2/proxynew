@@ -2919,13 +2919,13 @@ ul.amounts li {
     border-color: #ddd
 }
 .panel-primary {
-    border-color: #8175c7
+    border-color: #7087a3
 }
 
 .panel-primary > .panel-heading {
     color: #fff;
-    background-color: #8175c7;
-    border-color: #8175c7
+    background-color: #7087a3;
+    border-color: #7087a3
 }
 /*end*/
 .panel-heading .nav {
