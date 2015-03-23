@@ -108,12 +108,11 @@
                                       </div>
                                       <div class="form-group">
                                         <label for="inputEnable" class="col-sm-4 control-label">Enable</label>
-                                        <div class="col-sm-8">
-                                            <div class="btn-group btn-toggle">
-                                                <button type="button" name="inputEnable" class="btn btn-sm btn-primary active" value="1">ON</button>
-                                                <button type="button" name="inputEnable" class="btn btn-sm btn-default" value="0">OFF</button>
-                                            </div>
-                                        </div>
+                                          <div class="col-sm-8">
+                                               <div class="switch" id="inputEnable" data-on="primary" data-off="info">
+                                                    <input type="checkbox" checked />
+                                               </div>
+                                          </div>
                                       </div>
                                       <div class="form-group">
                                         <div align="right" style="padding-right: 15px;">
@@ -130,6 +129,8 @@
                </div>
         </section>
     </section>
+    <!-- js placed at the end of the document so the pages load faster -->
+    <script src="{{ url_for('static',filename='js/bootstrap-switch.js') }}"></script>
     <script>
             function getPos(obj) {
                 obj.focus();

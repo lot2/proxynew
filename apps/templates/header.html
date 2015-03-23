@@ -16,14 +16,23 @@
     <link href="{{ url_for('static',filename='assets/font-awesome/css/font-awesome.css') }}" rel="stylesheet" />
     <link href="{{ url_for('static',filename='assets/morris.js-0.4.3/morris.css') }}" rel="stylesheet" />
     <!-- Custom styles for this template -->
+    <link rel="stylesheet" type="text/css" href="static/assets/bootstrap-datepicker/css/datepicker.css" />
+    <link rel="stylesheet" type="text/css" href="static/assets/bootstrap-colorpicker/css/colorpicker.css" />
+    <link rel="stylesheet" type="text/css" href="static/assets/bootstrap-daterangepicker/daterangepicker.css" />
     <link href="{{ url_for('static',filename='css/style.css') }}" rel="stylesheet" />
     <link href="{{ url_for('static',filename='css/style-responsive.css') }}" rel="stylesheet" />
 
+    <script src="{{ url_for('static',filename='js/jquery.js') }}"></script>
+    <script src="{{ url_for('static',filename='js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static',filename='js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static',filename='js/jquery.scrollTo.min.js') }}"></script>
+    <script src="{{ url_for('static',filename='js/jquery.nicescroll.js') }}"></script>
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 tooltipss and media queries -->
     <!--[if lt IE 9]>
         <script src="{{ url_for('static',filename='js/html5shiv.js') }}"></script>
         <script src="{{ url_for('static',filename='js/respond.min.js') }}"></script>
     <![endif]-->
+<script src="{{ url_for('static',filename='js/input-limit.js') }}"></script>
 </head>
 <style>
     body {
@@ -310,7 +319,7 @@
         <!-- Modal -->
                 <div class="modal" id="pwdModal" tabindex="-1" role="dialog" aria-labelledby="pwdModalLabel"
                      aria-hidden="true">
-                    <div class="modal-dialog"  style="margin-top:70px;">
+                    <div class="modal-dialog modal-sm"  style="margin-top:70px;">
                         <div class="modal-content">
                           <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -351,13 +360,13 @@
                           <span>Dashboard</span>
                       </a>
                   </li>
-                  <li class="sub-menu {% if title == 'Database' %}active{% endif %}">
+                  <li class="{% if title == 'Database' %}active{% endif %}">
                       <a href="/database" class="">
                           <i class="icon-rss-sign"></i>
                           <span>Database Proxy</span>
                       </a>
                   </li>
-                  <li class="sub-menu {% if title == 'Sql' %}active{% endif %}">
+                  <li class="{% if title == 'Sql' %}active{% endif %}">
                       <a href="/sql" class="">
                           <i class="icon-book"></i>
                           <span>Sql Log</span>
@@ -382,25 +391,9 @@
       <!--sidebar end-->
 {% block content %}{% endblock %}
  </section>
-<!-- js placed at the end of the document so the pages load faster -->
-<script src="{{ url_for('static',filename='js/jquery.js') }}"></script>
-<script src="{{ url_for('static',filename='js/jquery.min.js') }}"></script>
-<script src="{{ url_for('static',filename='js/bootstrap.min.js') }}"></script>
-<script src="{{ url_for('static',filename='js/jquery.scrollTo.min.js') }}"></script>
-<script src="{{ url_for('static',filename='js/jquery.nicescroll.js') }}"></script>
-<script src="{{ url_for('static',filename='assets/morris.js-0.4.3/morris.min.js') }}"></script>
-<script src="{{ url_for('static',filename='assets/morris.js-0.4.3/raphael-min.js') }}"></script>
-<script src="{{ url_for('static',filename='assets/chart-master/Chart.js') }}"></script>
-<script src="{{ url_for('static',filename='js/jquery.sparkline.js') }}"></script>
 
-<!--common script for all pages-->
-<script src="{{ url_for('static',filename='js/common-scripts.js') }}"></script>
-
-<!-- script for this page only-->
-<script src="{{ url_for('static',filename='js/morris-script.js') }}"></script>
-<script src="{{ url_for('static',filename='js/all-chartjs.js') }}"></script>
-<script src="{{ url_for('static',filename='js/sparkline-chart.js') }}"></script>
-<script src="{{ url_for('static',filename='js/input-limit.js') }}"></script>
+    <!--common script for all pages-->
+    <script src="static/js/common-scripts.js"></script>
 <script>
     $(function(){
         if(!window.Modernizr.hashchange){
@@ -423,7 +416,7 @@
     //custom select box
 
     $(function(){
-       $('select#period').customSelect();
+       //$('select#period').customSelect();
     });
 </script>
 </body>
