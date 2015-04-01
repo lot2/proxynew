@@ -9,30 +9,60 @@
         }
     </style>
     <section id="main-content">
-    <header class="tab-head">
-        <ul class="nav nav-tabs">
-
-            <li class="active">
-                <a data-toggle="tab" style="padding: 13px 15px;" href="#webData">公司网站数据库</a>
-            </li>
-
-            <li>
-                <a data-toggle="tab" style="padding: 13px 15px;" href="#sapData">SAP数据库</a>
-            </li>
-            <li class="pull-right" style="margin-right: 10px;">
-                <form class="navbar-form navbar-right">
-                    <div class="form-group">
-                        <select id="period" class="form-control input-sm">
-                            <option>今日</option>
-                            <option>本周</option>
-                            <option>本月</option>
-                            <option>本季度</option>
-                        </select>
-                    </div>
-                </form>
+{#    <header class="tab-head">#}
+{#        <ul class="nav nav-tabs">#}
+{##}
+{#            <li class="active">#}
+{#                <a data-toggle="tab" style="padding: 13px 15px;" href="#webData">公司网站数据库</a>#}
+{#            </li>#}
+{##}
+{#            <li>#}
+{#                <a data-toggle="tab" style="padding: 13px 15px;" href="#sapData">SAP数据库</a>#}
+{#            </li>#}
+{#            <li class="pull-right" style="margin-right: 10px;">#}
+{#                <form class="navbar-form navbar-right">#}
+{#                    <div class="form-group">#}
+{#                        <select id="period" class="form-control input-sm">#}
+{#                            <option>今日</option>#}
+{#                            <option>本周</option>#}
+{#                            <option>本月</option>#}
+{#                            <option>本季度</option>#}
+{#                        </select>#}
+{#                    </div>#}
+{#                </form>#}
+{#            </li>#}
+{#        </ul>#}
+{#    </header>#}
+<section class="wrapper" style="padding: 0px;">
+{#<div class="row">#}
+<nav class="navbar navbar-static-top navbar-inverse" style="margin-bottom:0px;" role="navigation">
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <ul class="nav navbar-nav">
+            <li class="dropdown">
+                <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">公司网站数据库<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">公司网站数据库</a></li>
+                    <li><a href="#">SAP数据库</a></li>
+                </ul>
             </li>
         </ul>
-    </header>
+        <ul class="nav navbar-nav">
+            <li class="dropdown">
+                <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">今日<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">今日</a></li>
+                    <li><a href="#">本周</a></li>
+                    <li><a href="#">本月</a></li>
+                    <li><a href="#">本季度</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+</nav>
+{#</div>#}
+</section>
     <section class="wrapper tab-container">
         <!-- page start-->
         <div class="tab-content">
@@ -238,7 +268,7 @@
                     </div>
                 </div>
             </div>
-            <div class="tab-pane" id="sapData"><!--sap database-->
+            <div class="tab-pane" id="sapData">345
             </div>
         </div>
     </section>
@@ -248,4 +278,5 @@
     <script src="static/assets/morris.js-0.4.3/raphael-min.js" type="text/javascript"></script>
     <!-- script for this page only-->
     <script src="static/js/morris-script.js"></script>
+
 {% endblock %}

@@ -2924,8 +2924,10 @@ ul.amounts li {
 
 .panel-primary > .panel-heading {
     color: #fff;
-    background-color: #7087a3;
-    border-color: #7087a3
+    background-color: #35404d;
+    //background-color:#7087a3;
+    border-color: #35404d;
+
 }
 /*end*/
 .panel-heading .nav {
