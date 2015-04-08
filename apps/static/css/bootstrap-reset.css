@@ -107,12 +107,23 @@ a:hover {
     margin-top: 0;
 }
 
+.modal-header .close {
+    float: right;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    filter: alpha(opacity=20);
+    opacity: .2
+}
+
 /*text input*/
 
 .form-control {
     border: 1px solid #e2e2e4;
     box-shadow: none;
-    color: #c2c2c2;
+    //color: #c2c2c2;
 }
 
 
@@ -122,7 +133,7 @@ a:hover {
 }
 
 .form-horizontal .control-label {
-    font-weight: 300;
+    font-weight: 400;
     font-size: 14px;
     text-align: left;
 }

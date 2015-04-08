@@ -81,9 +81,9 @@
                         </tbody>
                     </table>
                         <div id="sql-detail" style="display: none;">
-                          <table id="user_table" class="table table-bordered table-hover" style="cursor: pointer;">
+                          <table id="user_table" class="table table-striped table-hover" style="cursor: pointer;">
                               <thead>
-                                  <tr style="background-color: #7087a3;color: #eee;">
+                                  <tr style="background: #35404d;color: #eee;">
                                       <th>时间</th><th>Database Proxy</th><th>SQL执行类型</th><th>SQL</th><th>错误信息</th><th>执行类型</th>
                                       <th>SQL Type</th>
                                   </tr>
@@ -126,25 +126,25 @@
                   <div class="form-group">
                       <label for="" class="col-lg-2 control-label">Pattern</label>
                       <div class="col-lg-10">
-                        <textarea class="form-control">select * from city_list where id=? and index=?</textarea>
+                        <textarea class="form-control" style="height: 200px;resize:none;" readonly>select * from city_list a left join city_list2 b on a.id = b.id where id=? and index=?
+                        </textarea>
                       </div>
                   </div>
                   <div class="form-group">
                       <label for="" class="col-lg-2 control-label">Parameters</label>
                       <div class="col-lg-4">
-                        <textarea class="form-control" style="height: 100px;" id="parameter">
-                        </textarea>
+                        <textarea class="form-control" style="resize:none;height: 100px;" id="parameter" readonly></textarea>
                       </div>
                       <label for="" class="col-lg-2 control-label">Metadata</label>
                       <div class="col-lg-4">
-                        <textarea class="form-control" style="height: 100px;">BusinessUser = wangyu
+                        <textarea class="form-control" style="height: 100px;resize:none;" readonly>BusinessUser = wangyu
                         </textarea>
                       </div>
                   </div>
                   <div class="form-group">
                       <label for="" class="col-lg-2 control-label">Error</label>
                       <div class="col-lg-10">
-                        <textarea class="form-control">select not allow
+                        <textarea class="form-control" style="resize:none;" readonly>select not allow
                         </textarea>
                       </div>
                   </div>

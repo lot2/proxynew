@@ -14,31 +14,46 @@
             <!-- page start-->
             <div class="row">
                 <div class="col-lg-6">
-                    <div class="panel panel-default div-scrollable" style="min-width: 330px;">
-                        <table id="user_table" class="table table-bordered table-hover" style="cursor: pointer;">
-                            <thead>
-                            <tr style="background-color: #7087a3;color: #eee;">
-                                <th>Email</th>
-                                <th>Proxy Count</th>
-                                <th>Max Connection</th>
-                                <th>Enable</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td>aaa@aaa.com</td>
-                                <td>1</td>
-                                <td>20</td>
-                                <td>True<input type="hidden" value="1"/></td>
-                            </tr>
-                            <tr>
-                                <td>bbb@bbb.com</td>
-                                <td>2</td>
-                                <td>100</td>
-                                <td>False<input type="hidden" value="0"/></td>
-                            </tr>
-                            </tbody>
-                        </table>
+                    <div class="panel panel-primary" style="min-width: 330px;">
+                        <div class="panel-heading">Users List</div>
+                        <div class="div-scrollable">
+                            <table id="user_table" class="table table-condensed table-striped table-advance table-hover" style="cursor: pointer;min-width: 330px;">
+                                <thead>
+                                <tr>
+                                    <th>Email</th>
+                                    <th>Proxy Count</th>
+                                    <th>Max Connection</th>
+                                    <th>Enable</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>aaa@aaa.com</td>
+                                    <td>1</td>
+                                    <td>20</td>
+                                    <td>True<input type="hidden" value="1"/></td>
+                                </tr>
+                                <tr>
+                                    <td>bbb@bbb.com</td>
+                                    <td>2</td>
+                                    <td>100</td>
+                                    <td>False<input type="hidden" value="0"/></td>
+                                </tr>
+                                <tr>
+                                    <td>bbb@bbb.com</td>
+                                    <td>2</td>
+                                    <td>100</td>
+                                    <td>False<input type="hidden" value="0"/></td>
+                                </tr>
+                                <tr>
+                                    <td>bbb@bbb.com</td>
+                                    <td>2</td>
+                                    <td>100</td>
+                                    <td>False<input type="hidden" value="0"/></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -109,7 +124,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <div class="col-sm-offset-4 col-sm-8" align="right">
+                                    <div class="col-sm-offset-4 col-sm-8">
                                         <button type="button" class="btn btn-primary">Save</button>
                                         <button type="button" class="btn btn-primary">Delete</button>
                                     </div>
